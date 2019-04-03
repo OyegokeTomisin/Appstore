@@ -15,8 +15,8 @@ class BaseTabBarController: UITabBarController {
         
         let today = createNavController(viewController: UIViewController(), title: "Today", imageName: "today_icon")
         let apps = createNavController(viewController: UIViewController(), title: "Apps", imageName: "apps")
-        let search = createNavController(viewController: UIViewController(), title: "Search", imageName: "search")
-        viewControllers = [today, apps, search]
+        let search = createNavController(viewController: AppsSearchCollectionViewController(), title: "Search", imageName: "search")
+        viewControllers = [search,today, apps]
     }
     
     fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String) -> UINavigationController{
