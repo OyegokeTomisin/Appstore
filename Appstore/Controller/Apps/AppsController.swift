@@ -14,7 +14,7 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .white
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: cellId)
     }
   
@@ -24,7 +24,6 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId , for: indexPath) as! AppsGroupCell
-        cell.titleLabel.text = "App title" 
         return cell
     }
     
@@ -32,4 +31,7 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
         return .init(width: view.frame.width, height: 250)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .init(top: 16, left: 0, bottom: 0, right: 0)
+    }
 }
