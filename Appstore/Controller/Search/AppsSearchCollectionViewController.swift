@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class AppsSearchCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
+class AppsSearchCollectionViewController: BaseListController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     
     fileprivate let cellId = "id1234"
     fileprivate let searchController = UISearchController(searchResultsController: nil)
@@ -86,14 +86,5 @@ class AppsSearchCollectionViewController: UICollectionViewController, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: view.frame.width, height: 350)
-    }
-    
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    }    
 }
