@@ -132,9 +132,9 @@
 		EBC9F5192281BE1F00CF31AB /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				EBC73D802289D61C00024C48 /* AppRowCell.swift */,
 				EBC9F51A2281BE3600CF31AB /* AppsGroupCell.swift */,
 				EBC73D8A2289EE6000024C48 /* AppsHeaderCell.swift */,
-				EBC73D802289D61C00024C48 /* AppRowCell.swift */,
 				EBC73D862289EA3200024C48 /* AppsPageHeader.swift */,
 			);
 			path = Apps;
