@@ -51,7 +51,7 @@ class AppsSearchCollectionViewController: BaseListController, UICollectionViewDe
                     print("Failed to fetch apps:", err)
                     return
                 }
-                self.appResults = results
+                self.appResults = results?.results ?? []
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -65,7 +65,7 @@ class AppsSearchCollectionViewController: BaseListController, UICollectionViewDe
                 print("Failed to fetch apps:", err)
                 return
             }
-            self.appResults = results
+            self.appResults = results?.results ?? []
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
