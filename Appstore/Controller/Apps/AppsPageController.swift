@@ -18,6 +18,17 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         collectionView.backgroundColor = .white
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        fetchData()
+    }
+    
+    fileprivate func fetchData(){
+        print("Fetching")
+        Service.shared.fetchGames { (appGroup, err) in
+            if let err = err{
+                print(err)
+            }
+            print(appGroup?.feed.results)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

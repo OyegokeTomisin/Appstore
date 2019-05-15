@@ -14,7 +14,7 @@ class AppsHeaderHorizontalController: BaseListController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
-        
+        //collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: cellId)
         
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
