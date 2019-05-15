@@ -13,15 +13,26 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     fileprivate let cellId = "id"
     fileprivate let headerId = "headerId"
     
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: .whiteLarge)
+        aiv.color = .black
+        aiv.startAnimating()
+        aiv.hidesWhenStopped = true
+        return aiv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.fillSuperview()
         fetchData()
     }
     
     //var editorsChoiceGames: AppGroup?
+    var socialApps = [SocialApp]()
     var groups = [AppGroup]()
     fileprivate func fetchData(){
         
@@ -32,30 +43,27 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
+        Service.shared.fetchSocialApps { (apps, err) in
+            self.socialApps = apps ?? []
+            dispatchGroup.leave()
+        }
+        
+        dispatchGroup.enter()
         Service.shared.fetchGames{(appGroup, err) in
             dispatchGroup.leave()
             group1 = appGroup
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
         }
         
         dispatchGroup.enter()
         Service.shared.fetchTopGrossing{(appGroup, err) in
             dispatchGroup.leave()
             group2 = appGroup
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
         }
         
         dispatchGroup.enter()
         Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/25/explicit.json"){(appGroup, err) in
             dispatchGroup.leave()
             group3 = appGroup
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
         }
         
         dispatchGroup.notify(queue: .main){
@@ -68,14 +76,16 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
             if let group = group3{
                 self.groups.append(group)
             }
+            self.activityIndicatorView.stopAnimating()
             self.collectionView.reloadData()
         }
         
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
-        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppsPageHeader
+        header.appHeaderHorizontalController.socialApps = self.socialApps
+        header.appHeaderHorizontalController.collectionView.reloadData()
         return header
     }
     
@@ -94,7 +104,7 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: 0)
+        return .init(width: view.frame.width, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
