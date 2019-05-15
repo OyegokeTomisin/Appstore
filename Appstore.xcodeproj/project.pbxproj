@@ -10,6 +10,7 @@
 		4DBCCA443CE3166495C03BEC /* Pods_Appstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0D78D9755D1F3BAA13886B /* Pods_Appstore.framework */; };
 		EB3F22F9226B69B900F79F55 /* preview.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB3F22F8226B69B900F79F55 /* preview.jpeg */; };
 		EB52E4B1228C70800030B841 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52E4B0228C70800030B841 /* SocialApp.swift */; };
+		EB52E4B3228C88940030B841 /* preview2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB52E4B2228C88940030B841 /* preview2.png */; };
 		EBA18BC8228C18F70041E696 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA18BC7228C18F70041E696 /* AppGroup.swift */; };
 		EBC00723225D73C4001AB32B /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC00722225D73C4001AB32B /* UIView+Layout.swift */; };
 		EBC00725225D78A4001AB32B /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC00724225D78A4001AB32B /* VerticalStackView.swift */; };
@@ -39,6 +40,7 @@
 		D1E8A9AF849B8A4075358A68 /* Pods-Appstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appstore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Appstore/Pods-Appstore.debug.xcconfig"; sourceTree = "<group>"; };
 		EB3F22F8226B69B900F79F55 /* preview.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpeg; sourceTree = "<group>"; };
 		EB52E4B0228C70800030B841 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
+		EB52E4B2228C88940030B841 /* preview2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview2.png; sourceTree = "<group>"; };
 		EBA18BC7228C18F70041E696 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		EBC00722225D73C4001AB32B /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		EBC00724225D78A4001AB32B /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		EB3F22F7226B695B00F79F55 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EB52E4B2228C88940030B841 /* preview2.png */,
 				EB3F22F8226B69B900F79F55 /* preview.jpeg */,
 			);
 			path = Images;
@@ -280,6 +283,7 @@
 				EBFAA12722522CA300BA1FF5 /* LaunchScreen.storyboard in Resources */,
 				EBFAA12422522CA300BA1FF5 /* Assets.xcassets in Resources */,
 				EB3F22F9226B69B900F79F55 /* preview.jpeg in Resources */,
+				EB52E4B3228C88940030B841 /* preview2.png in Resources */,
 				EBFAA12222522CA100BA1FF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
