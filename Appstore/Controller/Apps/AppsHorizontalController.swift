@@ -15,6 +15,7 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
     fileprivate let topBottomPadding: CGFloat = 12
     
     var appGroup: AppGroup?
+    var didSelectHandler: ((FeedResult) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,12 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
         cell.companyLabel.text = app?.artistName
         cell.imageView.sd_setImage(with: URL(string: app?.artworkUrl100 ?? " "))
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app = appGroup?.feed.results[indexPath.item]{
+             didSelectHandler?(app)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

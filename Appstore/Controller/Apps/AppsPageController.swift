@@ -100,9 +100,13 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         cell.titleLabel.text = appGroups.feed.title
         cell.horizontalController.appGroup = appGroups
         cell.horizontalController.collectionView.reloadData()
+        cell.horizontalController.didSelectHandler = { [weak self] feedResult in
+            let appDetailsController = AppDetailsController()
+            appDetailsController.navigationItem.title = feedResult.name
+            self?.navigationController?.pushViewController(appDetailsController, animated: true)
+        }
         return cell
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return .init(width: view.frame.width, height: 300)
     }
