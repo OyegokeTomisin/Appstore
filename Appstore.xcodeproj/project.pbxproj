@@ -14,7 +14,8 @@
 		EB52E4B1228C70800030B841 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52E4B0228C70800030B841 /* SocialApp.swift */; };
 		EB52E4B3228C88940030B841 /* preview2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB52E4B2228C88940030B841 /* preview2.png */; };
 		EBA18BC8228C18F70041E696 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA18BC7228C18F70041E696 /* AppGroup.swift */; };
-		EBAA605722987D9900953762 /* AppDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA605622987D9900953762 /* AppDetailsController.swift */; };
+		EBAA605722987D9900953762 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA605622987D9900953762 /* AppDetailController.swift */; };
+		EBAA605A229884D400953762 /* AppDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA6059229884D400953762 /* AppDetailCell.swift */; };
 		EBC00723225D73C4001AB32B /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC00722225D73C4001AB32B /* UIView+Layout.swift */; };
 		EBC00725225D78A4001AB32B /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC00724225D78A4001AB32B /* VerticalStackView.swift */; };
 		EBC73D7F2289CC4700024C48 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC73D7E2289CC4700024C48 /* AppsHorizontalController.swift */; };
@@ -47,7 +48,8 @@
 		EB52E4B0228C70800030B841 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		EB52E4B2228C88940030B841 /* preview2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview2.png; sourceTree = "<group>"; };
 		EBA18BC7228C18F70041E696 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
-		EBAA605622987D9900953762 /* AppDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailsController.swift; sourceTree = "<group>"; };
+		EBAA605622987D9900953762 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
+		EBAA6059229884D400953762 /* AppDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCell.swift; sourceTree = "<group>"; };
 		EBC00722225D73C4001AB32B /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		EBC00724225D78A4001AB32B /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		EBC73D7E2289CC4700024C48 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
@@ -115,7 +117,15 @@
 		EBAA605522987D7300953762 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				EBAA605622987D9900953762 /* AppDetailsController.swift */,
+				EBAA605622987D9900953762 /* AppDetailController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		EBAA6058229884B100953762 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				EBAA6059229884D400953762 /* AppDetailCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -154,6 +164,7 @@
 		EBC9F5192281BE1F00CF31AB /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				EBAA6058229884B100953762 /* Details */,
 				EBC73D802289D61C00024C48 /* AppRowCell.swift */,
 				EBC9F51A2281BE3600CF31AB /* AppsGroupCell.swift */,
 				EBC73D8A2289EE6000024C48 /* AppsHeaderCell.swift */,
@@ -363,12 +374,13 @@
 				EB396F10228FA2F3001BBACC /* BetterSnappingLayout.swift in Sources */,
 				EBD816FB22526DB700B81354 /* SearchResultsCell.swift in Sources */,
 				EB52E4B1228C70800030B841 /* SocialApp.swift in Sources */,
-				EBAA605722987D9900953762 /* AppDetailsController.swift in Sources */,
+				EBAA605722987D9900953762 /* AppDetailController.swift in Sources */,
 				EBD5091D22675F5500C79D30 /* SearchResult.swift in Sources */,
 				EBA18BC8228C18F70041E696 /* AppGroup.swift in Sources */,
 				EBC00723225D73C4001AB32B /* UIView+Layout.swift in Sources */,
 				EBC73D8B2289EE6000024C48 /* AppsHeaderCell.swift in Sources */,
 				EBC9F5172281BA0C00CF31AB /* BaseListController.swift in Sources */,
+				EBAA605A229884D400953762 /* AppDetailCell.swift in Sources */,
 				EBC73D812289D61C00024C48 /* AppRowCell.swift in Sources */,
 				EBC73D852289E8BB00024C48 /* AppsPageController.swift in Sources */,
 				EBFAA11F22522CA100BA1FF5 /* ViewController.swift in Sources */,
