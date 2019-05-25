@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4DBCCA443CE3166495C03BEC /* Pods_Appstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0D78D9755D1F3BAA13886B /* Pods_Appstore.framework */; };
+		EB14039C22996B9600585FF5 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB14039B22996B9600585FF5 /* PreviewCell.swift */; };
+		EB14039E22996DB900585FF5 /* PreviewScreenShotsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB14039D22996DB900585FF5 /* PreviewScreenShotsController.swift */; };
 		EB396F0E228F9DC3001BBACC /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB396F0D228F9DC3001BBACC /* HorizontalSnappingController.swift */; };
 		EB396F10228FA2F3001BBACC /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB396F0F228FA2F3001BBACC /* BetterSnappingLayout.swift */; };
 		EB3F22F9226B69B900F79F55 /* preview.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB3F22F8226B69B900F79F55 /* preview.jpeg */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		4466CE644CF360D62FCB4652 /* Pods-Appstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appstore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appstore/Pods-Appstore.release.xcconfig"; sourceTree = "<group>"; };
 		D1E8A9AF849B8A4075358A68 /* Pods-Appstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appstore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Appstore/Pods-Appstore.debug.xcconfig"; sourceTree = "<group>"; };
+		EB14039B22996B9600585FF5 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
+		EB14039D22996DB900585FF5 /* PreviewScreenShotsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewScreenShotsController.swift; sourceTree = "<group>"; };
 		EB396F0D228F9DC3001BBACC /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		EB396F0F228FA2F3001BBACC /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
 		EB3F22F8226B69B900F79F55 /* preview.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpeg; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EBAA605622987D9900953762 /* AppDetailController.swift */,
+				EB14039D22996DB900585FF5 /* PreviewScreenShotsController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				EBAA6059229884D400953762 /* AppDetailCell.swift */,
+				EB14039B22996B9600585FF5 /* PreviewCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 			files = (
 				EBFAA1322252462800BA1FF5 /* AppsSearchCollectionViewController.swift in Sources */,
 				EB396F10228FA2F3001BBACC /* BetterSnappingLayout.swift in Sources */,
+				EB14039E22996DB900585FF5 /* PreviewScreenShotsController.swift in Sources */,
 				EBD816FB22526DB700B81354 /* SearchResultsCell.swift in Sources */,
 				EB52E4B1228C70800030B841 /* SocialApp.swift in Sources */,
 				EBAA605722987D9900953762 /* AppDetailController.swift in Sources */,
@@ -386,6 +393,7 @@
 				EBFAA11F22522CA100BA1FF5 /* ViewController.swift in Sources */,
 				EBC9F51B2281BE3600CF31AB /* AppsGroupCell.swift in Sources */,
 				EBC73D872289EA3200024C48 /* AppsPageHeader.swift in Sources */,
+				EB14039C22996B9600585FF5 /* PreviewCell.swift in Sources */,
 				EBD5091F22676B2300C79D30 /* Service.swift in Sources */,
 				EBC73D832289D71100024C48 /* Extensions.swift in Sources */,
 				EBFAA11D22522CA100BA1FF5 /* AppDelegate.swift in Sources */,
