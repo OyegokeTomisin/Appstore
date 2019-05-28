@@ -37,7 +37,7 @@ class AppsSearchCollectionViewController: BaseListController, UICollectionViewDe
         definesPresentationContext = true
         navigationItem.searchController = self.searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        //searchController.dimsBackgroundDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
     }
     
@@ -77,6 +77,12 @@ class AppsSearchCollectionViewController: BaseListController, UICollectionViewDe
         let appResult = appResults[indexPath.item]
         cell.appResult = appResult
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let appId = String(appResults[indexPath.item].trackId)
+        let appDetailController = AppDetailController(appId: appId)
+        navigationController?.pushViewController(appDetailController, animated: true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
