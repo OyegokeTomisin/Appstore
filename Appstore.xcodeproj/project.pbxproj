@@ -14,6 +14,7 @@
 		EB1403A2229993BE00585FF5 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1403A1229993BE00585FF5 /* ReviewsController.swift */; };
 		EB29B9CE2299A2E200260C9A /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29B9CD2299A2E200260C9A /* ReviewCell.swift */; };
 		EB29B9D02299C79400260C9A /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29B9CF2299C79400260C9A /* Reviews.swift */; };
+		EB364140229F0569000C7A9A /* AppFullscreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB36413F229F0569000C7A9A /* AppFullscreenDescriptionCell.swift */; };
 		EB396F0E228F9DC3001BBACC /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB396F0D228F9DC3001BBACC /* HorizontalSnappingController.swift */; };
 		EB396F10228FA2F3001BBACC /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB396F0F228FA2F3001BBACC /* BetterSnappingLayout.swift */; };
 		EB3F22F9226B69B900F79F55 /* preview.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB3F22F8226B69B900F79F55 /* preview.jpeg */; };
@@ -33,6 +34,7 @@
 		EBC73D8B2289EE6000024C48 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC73D8A2289EE6000024C48 /* AppsHeaderCell.swift */; };
 		EBC8E92D229DDF740086BDE6 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8E92C229DDF740086BDE6 /* TodayController.swift */; };
 		EBC8E930229DE30C0086BDE6 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8E92F229DE30C0086BDE6 /* TodayCell.swift */; };
+		EBC8E932229EE8350086BDE6 /* AppFullscreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8E931229EE8350086BDE6 /* AppFullscreenController.swift */; };
 		EBC9F5172281BA0C00CF31AB /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9F5162281BA0C00CF31AB /* BaseListController.swift */; };
 		EBC9F51B2281BE3600CF31AB /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9F51A2281BE3600CF31AB /* AppsGroupCell.swift */; };
 		EBD5091D22675F5500C79D30 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD5091C22675F5500C79D30 /* SearchResult.swift */; };
@@ -56,6 +58,7 @@
 		EB1403A1229993BE00585FF5 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
 		EB29B9CD2299A2E200260C9A /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		EB29B9CF2299C79400260C9A /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		EB36413F229F0569000C7A9A /* AppFullscreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenDescriptionCell.swift; sourceTree = "<group>"; };
 		EB396F0D228F9DC3001BBACC /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		EB396F0F228FA2F3001BBACC /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
 		EB3F22F8226B69B900F79F55 /* preview.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpeg; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		EBC73D8A2289EE6000024C48 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		EBC8E92C229DDF740086BDE6 /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
 		EBC8E92F229DE30C0086BDE6 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
+		EBC8E931229EE8350086BDE6 /* AppFullscreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenController.swift; sourceTree = "<group>"; };
 		EBC9F5162281BA0C00CF31AB /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		EBC9F51A2281BE3600CF31AB /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		EBD5091C22675F5500C79D30 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC8E92C229DDF740086BDE6 /* TodayController.swift */,
+				EBC8E931229EE8350086BDE6 /* AppFullscreenController.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC8E92F229DE30C0086BDE6 /* TodayCell.swift */,
+				EB36413F229F0569000C7A9A /* AppFullscreenDescriptionCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				EB396F10228FA2F3001BBACC /* BetterSnappingLayout.swift in Sources */,
 				EB14039E22996DB900585FF5 /* PreviewScreenShotsController.swift in Sources */,
 				EB29B9CE2299A2E200260C9A /* ReviewCell.swift in Sources */,
+				EBC8E932229EE8350086BDE6 /* AppFullscreenController.swift in Sources */,
 				EBD816FB22526DB700B81354 /* SearchResultsCell.swift in Sources */,
 				EB52E4B1228C70800030B841 /* SocialApp.swift in Sources */,
 				EBAA605722987D9900953762 /* AppDetailController.swift in Sources */,
@@ -428,6 +435,7 @@
 				EBC73D812289D61C00024C48 /* AppRowCell.swift in Sources */,
 				EBC73D852289E8BB00024C48 /* AppsPageController.swift in Sources */,
 				EBFAA11F22522CA100BA1FF5 /* ViewController.swift in Sources */,
+				EB364140229F0569000C7A9A /* AppFullscreenDescriptionCell.swift in Sources */,
 				EBC9F51B2281BE3600CF31AB /* AppsGroupCell.swift in Sources */,
 				EBC73D872289EA3200024C48 /* AppsPageHeader.swift in Sources */,
 				EB14039C22996B9600585FF5 /* PreviewCell.swift in Sources */,

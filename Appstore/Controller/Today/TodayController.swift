@@ -22,32 +22,41 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
     }
     
     var startingFrame: CGRect?
+    var appFullscreenController: UIViewController!
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let view = UIView()
-        view.backgroundColor = .purple
-        view.layer.cornerRadius = 16
+        let appFullscreenController = AppFullscreenController()
+        let animatableView = appFullscreenController.view!
+        animatableView.layer.cornerRadius = 16
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRemoveRedView))
-        view.addGestureRecognizer(tapGesture)
-        self.view.addSubview(view)
+        animatableView.addGestureRecognizer(tapGesture)
+        
+        self.view.addSubview(animatableView)
+        addChild(appFullscreenController)
+        
+        
         guard let cell = collectionView.cellForItem(at: indexPath) else { return }
         guard let startingFrame = cell.superview?.convert(cell.frame, to: nil) else { return }
         self.startingFrame = startingFrame
-        view.frame = startingFrame
+        self.appFullscreenController = appFullscreenController
+        
+        animatableView.frame = startingFrame
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-            view.frame = self.view.frame
+            self.tabBarController?.tabBar.transform =  CGAffineTransform(translationX: 0, y: 100)
+            animatableView.frame = self.view.frame
             }, completion: nil)
     }
     
     
     @objc func handleRemoveRedView(gesture: UITapGestureRecognizer){
-        
-        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseIn, animations: {
             gesture.view?.frame = self.startingFrame ?? .zero
-            gesture.view?.alpha = 0.5
+            gesture.view?.alpha = 0.2
+            self.tabBarController?.tabBar.transform = .identity
         }, completion: { _ in
             gesture.view?.removeFromSuperview()
+            self.appFullscreenController.removeFromParent()
         })
     }
     
