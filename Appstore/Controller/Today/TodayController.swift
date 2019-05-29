@@ -21,9 +21,37 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
         collectionView.register(TodayCell.self, forCellWithReuseIdentifier: cellId)
     }
     
+    var startingFrame: CGRect?
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Animate fullscreen somehow")
+        
+        let view = UIView()
+        view.backgroundColor = .purple
+        view.layer.cornerRadius = 16
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRemoveRedView))
+        view.addGestureRecognizer(tapGesture)
+        self.view.addSubview(view)
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
+        guard let startingFrame = cell.superview?.convert(cell.frame, to: nil) else { return }
+        self.startingFrame = startingFrame
+        view.frame = startingFrame
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+            view.frame = self.view.frame
+            }, completion: nil)
     }
+    
+    
+    @objc func handleRemoveRedView(gesture: UITapGestureRecognizer){
+        
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+            gesture.view?.frame = self.startingFrame ?? .zero
+            gesture.view?.alpha = 0.5
+        }, completion: { _ in
+            gesture.view?.removeFromSuperview()
+        })
+    }
+    
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
